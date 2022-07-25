@@ -27,6 +27,7 @@ def get_account_info(s_name, headers=REQUEST_HEADERS):
     if req.status_code == 200:
         account_info_dict = json.loads(req.content.decode('utf-8'))
     else:
+        print(req.status_code)
         account_info_dict = None
 
     return account_info_dict
